@@ -42,3 +42,17 @@ INSERT INTO Address (StreetNumber, Street, City)
 VALUES
 (2, "Köpmangatan", "Stockholm");
 
+SELECT 
+    *
+FROM
+    education.course
+ORDER BY _Code DESC;
+
+UPDATE education.student 
+SET 
+    First_Name = 'Anna'
+WHERE
+    id = 2;
+
+SELECT student.Id AS student_id, course.Id AS course_id, course._Code AS course_Code
+FROM student JOIN course LIMIT 4 ;
